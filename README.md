@@ -37,7 +37,8 @@
 - party_id
 - state_fixed_effects
 
-注意：social_media_news_index 是由多个社交媒体新闻使用相关变量标准化后平均得到的综合指标。部分变量需要反向编码。
+> **注意：**
+> social_media_news_index 是由多个社交媒体新闻使用相关变量标准化后平均得到的综合指标。部分变量需要反向编码。
 
 ## 数据来源:
 [ANES 2024 Time Series Study](https://electionstudies.org/)
@@ -130,9 +131,8 @@ Downs. An Economic Theory of Democracy.
 [^1]: 标准化的目的在于让不同量纲的变量具有可比性。
 [^2]: 固定效应用于吸收州层面的不可观测差异。
 
-补充说明：
+<details>
+	<summary>补充说明：</summary>
 如果读者不了解 Z-score，可以展开解释。
 如果读者熟悉统计学，可以跳过基础说明。
-
-最终输出要求：
-生成一份适合放在 GitHub README 中的 Markdown 项目说明文档。
+<\details>
