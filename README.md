@@ -1,5 +1,7 @@
 # 复旦大学课程项目：社交媒体新闻使用与政治态度分析
 
+---
+
 项目名称：*Social Media News Use and Political Attitudes*
 作者：张三
 课程：计算社会科学导论
@@ -47,6 +49,7 @@ ANES 2024 Time Series Study
 
 ## 变量说明表：
 | 变量名 | **类型** | 含义 | 处理方式 |
+| ----- | ------- | --- | ------- |
 | social_media_news_index | continuous | 社交媒体新闻使用指数 | Z-score standardization |
 | gun_control_attitude | binary | 是否支持禁用攻击性武器 | Logistic regression |
 | party_id | categorical | 党派认同 | 控制变量 |
