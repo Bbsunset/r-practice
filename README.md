@@ -16,21 +16,22 @@
 3. 在控制年龄、性别、教育、收入、党派认同等变量后，这种关系是否仍然存在？
 
 ### 核心变量：
-自变量：\social_media_news_index\
-因变量：
-immigration_crime_attitude
-birthright_citizenship_attitude
-gun_control_attitude
-racial_discrimination_attitude
-transgender_military_attitude
+- 自变量：
+	- `social_media_news_index`
+- 因变量：
+	- immigration_crime_attitude
+	- birthright_citizenship_attitude
+	- gun_control_attitude
+	- racial_discrimination_attitude
+	- transgender_military_attitude
 ### 控制变量：
-age_group
-gender
-race
-education
-income
-party_id
-state_fixed_effects
+- age_group
+- gender
+- race
+- education
+- income
+- party_id
+- state_fixed_effects
 
 注意：social_media_news_index 是由多个社交媒体新闻使用相关变量标准化后平均得到的综合指标。部分变量需要反向编码。
 
@@ -60,7 +61,8 @@ income | ordinal | 收入水平 | 控制变量
 第七步：建立加权 OLS 或 Logistic 回归模型
 第八步：解释结果与局限
 
-## Python 示例代码：
+### Python 示例代码：
+```
 import pandas as pd
 import numpy as np
 
@@ -74,8 +76,9 @@ for col in media_vars:
 df["social_media_news_index"] = df[[col + "_z" for col in media_vars]].mean(axis=1)
 
 print(df["social_media_news_index"].describe())
-
-R 示例代码：
+```
+### R 示例代码：
+```
 library(dplyr)
 
 anes_clean <- anes %>%
@@ -85,7 +88,7 @@ anes_clean <- anes %>%
       na.rm = TRUE
     )
   )
-
+```
 ## 数学表达：
 social_media_news_index = average of standardized social media news variables
 z = x minus mean divided by standard deviation
@@ -93,13 +96,13 @@ z = x minus mean divided by standard deviation
 Y_i = beta_0 + beta_1 social_media_news_index_i + beta_2 controls_i + gamma_state + epsilon_i
 
 ## 待办事项：
-下载 ANES 数据
-阅读 codebook
-完成变量反向编码
-完成描述统计表
-完成回归模型
-撰写结果解释
-检查引用格式
+- [x]下载 ANES 数据
+- [x]阅读 codebook
+- []完成变量反向编码
+- []完成描述统计表
+- []完成回归模型
+- []撰写结果解释
+- []检查引用格式
 
 ## 引用材料：
 Green, Palmquist, and Schickler. Partisan Hearts and Minds.
