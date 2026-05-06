@@ -116,8 +116,8 @@ Green, Palmquist, and Schickler. Partisan Hearts and Minds.
 ANES 2024 Time Series Study.
 Downs. An Economic Theory of Democracy.
 
-需要删除的旧方案：
-原计划直接使用所有社交媒体使用变量相加，不进行标准化。这个方案存在量纲不一致问题，因此废弃。
+==需要删除的旧方案：
+原计划直接使用所有社交媒体使用变量相加，不进行标准化。这个方案存在量纲不一致问题，因此废弃。==
 
 ## 研究提醒：
 > 不要把相关关系直接解释为因果关系。
