@@ -10,7 +10,7 @@
 - 版本：v0.3
 
 ## 项目简介：
-本项目基于 ANES 2024 Time Series 数据，尝试分析社交媒体新闻使用程度与美国公众在移民、枪支、种族、性别议题上的态度之间是否存在系统性关系。项目使用 Python 进行数据清洗、变量构建、描述统计和回归分析。
+本项目基于 [ANES 2024 Time Series](https://electionstudies.org/) 数据，尝试分析社交媒体新闻使用程度与美国公众在移民、枪支、种族、性别议题上的态度之间是否存在系统性关系。项目使用 Python 进行数据清洗、变量构建、描述统计和回归分析。
 
 ---
 
@@ -39,13 +39,12 @@
 
 注意：social_media_news_index 是由多个社交媒体新闻使用相关变量标准化后平均得到的综合指标。部分变量需要反向编码。
 
-## 数据来源：
-ANES 2024 Time Series Study
-官方网站：https://electionstudies.org/
+## 数据来源:
+[ANES 2024 Time Series Study](https://electionstudies.org/)
 代码仓库：https://github.com/example/anes-social-media-project
 
 ## 图片占位：
-项目流程图：https://dummyimage.com/800x300/eeeeee/000000&text=Research+Workflow
+![项目流程图](https://dummyimage.com/800x300/eeeeee/000000&text=Research+Workflow)
 
 ## 变量说明表：
 | 变量名 | **类型** | 含义 | 处理方式 |
@@ -129,7 +128,6 @@ Downs. An Economic Theory of Democracy.
 固定效应用于吸收州层面的不可观测差异。[^2]
 
 [^1]: 标准化的目的在于让不同量纲的变量具有可比性。
-
 [^2]: 固定效应用于吸收州层面的不可观测差异。
 
 补充说明：
