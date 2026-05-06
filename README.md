@@ -124,6 +124,12 @@ Downs. An Economic Theory of Democracy.
 > 不要忽略党派认同这一关键控制变量。
 > 如果可能，需要考虑内生性问题。
 
+<details>
+	<summary>补充说明：</summary>
+如果读者不了解 Z-score，可以展开解释。
+如果读者熟悉统计学，可以跳过基础说明。
+<\details>
+
 脚注内容：
 标准化的目的在于让不同量纲的变量具有可比性。[^1]
 固定效应用于吸收州层面的不可观测差异。[^2]
@@ -131,8 +137,4 @@ Downs. An Economic Theory of Democracy.
 [^1]: 标准化的目的在于让不同量纲的变量具有可比性。
 [^2]: 固定效应用于吸收州层面的不可观测差异。
 
-<details>
-	<summary>补充说明：</summary>
-如果读者不了解 Z-score，可以展开解释。
-如果读者熟悉统计学，可以跳过基础说明。
-<\details>
+
