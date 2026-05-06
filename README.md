@@ -10,6 +10,8 @@
 ## 项目简介：
 本项目基于 ANES 2024 Time Series 数据，尝试分析社交媒体新闻使用程度与美国公众在移民、枪支、种族、性别议题上的态度之间是否存在系统性关系。项目使用 Python 进行数据清洗、变量构建、描述统计和回归分析。
 
+---
+
 ## 研究问题：
 1. 社交媒体新闻使用程度是否与更极化的政治态度相关？
 2. 不同平台的新闻使用是否对应不同议题上的态度差异？
@@ -44,12 +46,12 @@ ANES 2024 Time Series Study
 项目流程图：https://dummyimage.com/800x300/eeeeee/000000&text=Research+Workflow
 
 ## 变量说明表：
-变量名 | 类型 | 含义 | 处理方式
-social_media_news_index | continuous | 社交媒体新闻使用指数 | Z-score standardization
-gun_control_attitude | binary | 是否支持禁用攻击性武器 | Logistic regression
-party_id | categorical | 党派认同 | 控制变量
-education | ordinal | 教育程度 | 控制变量
-income | ordinal | 收入水平 | 控制变量
+| 变量名 | **类型** | 含义 | 处理方式 |
+| social_media_news_index | continuous | 社交媒体新闻使用指数 | Z-score standardization |
+| gun_control_attitude | binary | 是否支持禁用攻击性武器 | Logistic regression |
+| party_id | categorical | 党派认同 | 控制变量 |
+| education | ordinal | 教育程度 | 控制变量 |
+| income | ordinal | 收入水平 | 控制变量 |
 
 ## 分析流程：
 第一步：读取数据
@@ -93,16 +95,18 @@ anes_clean <- anes %>%
 social_media_news_index = average of standardized social media news variables
 z = x minus mean divided by standard deviation
 回归模型：
+$$
 Y_i = beta_0 + beta_1 social_media_news_index_i + beta_2 controls_i + gamma_state + epsilon_i
+$$
 
 ## 待办事项：
-- [x]下载 ANES 数据
-- [x]阅读 codebook
-- []完成变量反向编码
-- []完成描述统计表
-- []完成回归模型
-- []撰写结果解释
-- []检查引用格式
+- [x] 下载 ANES 数据
+- [x] 阅读 codebook
+- [ ] 完成变量反向编码
+- [ ] 完成描述统计表
+- [ ] 完成回归模型
+- [ ] 撰写结果解释
+- [ ] 检查引用格式
 
 ## 引用材料：
 Green, Palmquist, and Schickler. Partisan Hearts and Minds.
@@ -112,14 +116,18 @@ Downs. An Economic Theory of Democracy.
 需要删除的旧方案：
 原计划直接使用所有社交媒体使用变量相加，不进行标准化。这个方案存在量纲不一致问题，因此废弃。
 
-研究提醒：
-不要把相关关系直接解释为因果关系。
-不要忽略党派认同这一关键控制变量。
-如果可能，需要考虑内生性问题。
+## 研究提醒：
+> 不要把相关关系直接解释为因果关系。
+> 不要忽略党派认同这一关键控制变量。
+> 如果可能，需要考虑内生性问题。
 
 脚注内容：
-标准化的目的在于让不同量纲的变量具有可比性。
-固定效应用于吸收州层面的不可观测差异。
+标准化的目的在于让不同量纲的变量具有可比性。[^1]
+固定效应用于吸收州层面的不可观测差异。[^2]
+
+[^1]: 标准化的目的在于让不同量纲的变量具有可比性。
+
+[^2]: 固定效应用于吸收州层面的不可观测差异。
 
 补充说明：
 如果读者不了解 Z-score，可以展开解释。
